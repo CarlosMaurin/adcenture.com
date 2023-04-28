@@ -1,0 +1,192 @@
+
+
+
+.main-prices{
+    background-image: url(./assets/images/gradient.png);
+    background-position: center;
+    background-size: cover;
+}
+.formulario-container{
+    padding-top: 8rem;
+}
+.formulario{
+    width: 450px;
+    color: white;
+    font-weight: bold;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.price-container-row{
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+.price-container-col{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+.delegate-container{
+    border-radius: 0.5rem;
+    border: solid 1px white;
+    width: 350px;
+}
+.delegate{
+    background-color: #F3F3F3;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem;
+}
+.delegate-price2{
+    display: none;
+}
+.delegate-price-active{
+    display: block;
+}
+.active-price{
+    display: none;
+}
+.delegate-price1{
+    font-size: 3.5rem;
+}
+.delegate-button{
+    display: flex;
+    justify-content: center;
+}
+.delegate-button-active{
+    display: none;
+}
+.delegate-button2{
+    display: none;
+}
+.delegate-button2-active{
+    display: flex;
+    justify-content: center;
+}
+.delegate-button2-active button{
+    background-color: #22B574;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    padding: 0.5rem 0;
+    width: 80%;
+    font-weight: bold;
+}
+.delegate-button2-active a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.delegate-button a{
+    text-decoration: none;
+    color: white;
+}
+.delegate-button button{
+    background-color: #22B574;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    padding: 0.5rem 0;
+    width: 80%;
+    font-weight: bold;
+}
+.delegate-task{
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    align-items: center;
+}
+.delegate-task p{
+    margin: 0;
+    font-weight: bold;
+
+}
+.delegate-web{
+    background-color: #F3F3F3;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delegate-web p{
+    margin: 0;
+    font-weight: bold;
+}
+.delegate-priority{
+    background-color: #ffff;
+
+}
+.delegate-priority1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem 0 1.5rem;
+}
+.delegate-priority1 p{
+    margin: 0;
+    font-weight: bold;
+
+}
+.delegate-priority2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.delegate-priority2 p{
+    font-size: 0.7rem;
+}
+.delegate-management{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #F3F3F3;
+}
+.delegate-management1-text1{
+    margin: 0;
+    font-weight: bold;
+}
+.delegate-management1-text1 span{
+    color: orangered;
+}
+.delegate-management1-text2{
+    font-size: 0.7rem;
+}
+
+.delegate-management img{
+    width: 2rem;
+}
+.delegate-recurring{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #ffff;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.delegate-recurring-text1{
+    font-weight: bold;
+    margin: 0;
+}
+
+.delegate-recurring-text2{
+    font-size: 0.7rem;
+}
+
+.delegate-recurring img{
+    width: 2rem;
+}
+
+
+@media (max-width: 576px){
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        width: 370px;
+    }
+}

@@ -1,0 +1,2036 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1F2023;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+/**************** HEADER *******************/
+
+.header-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-color: rgba(31, 32, 35, 0.5);
+    
+}
+.header-container:hover{
+    background-color: rgba(31, 32, 35, 0.9);
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    z-index: 1;
+}
+.logo-container img{
+    width: 4.5rem;
+    margin-left: 2rem;
+}
+
+.navbar-container{
+    width: 65%;
+    height: 100%;
+}
+
+.navbar-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.navbar-list-links{
+    list-style: none;
+    font-size: 1.1rem;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.navbar-list .navbar-list-links > a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+.menu-vertical > li{
+    list-style: none;
+}
+.menu-vertical > li > a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5;
+    font-size: 0.8rem;
+}
+.navbar-list .navbar-list-links > a:hover{
+    background-color: inherit;
+    border-radius: 0.5rem;
+}
+
+@media (hover: hover){
+    .navbar-list .navbar-list-links > a:hover{
+        background-color: #AA436F;
+        border-radius: 0.5rem;
+    }
+        
+}
+
+.menu-vertical{
+    position: absolute;
+    padding: 0;
+    width: max-content;
+    top: 100%;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    background-color: rgba(31, 32, 35, 0.9);
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.menu-vertical > li > a:hover{
+    color: #EBAE45;
+
+}
+
+.nav-icon-5{
+    width: 35px;
+    height: 30px;
+    margin: 0 1.5rem ;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 2;
+    display: none;
+}
+.nav-icon-5 span{
+    background-color: white;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+    transition-duration: 500ms
+}
+.nav-icon-5 span:nth-child(1){
+    top:0px;
+    left: 0px;
+}
+.nav-icon-5 span:nth-child(2){
+    top:13px;
+    left: 0px;
+    opacity:1;
+}
+.nav-icon-5 span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+}
+
+.nav-icon-5.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+}
+.nav-icon-5.open span:nth-child(2){
+    opacity:0;
+}
+.nav-icon-5.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 13px;
+} 
+
+
+/*-------------------------------------------- */
+/*------------------ HERO--------------------- */
+/*-------------------------------------------- */
+
+
+.hero-container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("./assets/images/gradient.png");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* codigo para estilos del fondo del hero */
+.bg1{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #1F2023;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    top: 0;
+}
+.bg2{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 100vh;
+    background-color: #1F2023;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+.bg3{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100vh;
+    background-color: #1F2023;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+.bg4{
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 100vh;
+    background-color: #1F2023;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+
+/* ---------------------------------------------------------- */
+
+
+.main-title-container{
+    display: flex;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+.main-title{
+    width: 70%;
+    color: white;
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    line-height: 1;
+    text-align: center;
+font-family: 'Montserrat', sans-serif;
+}
+.second-title-container{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    color: white;
+    z-index: 2;
+    width: 65%;
+}
+.second-title{
+    font-size: 1.8rem;
+}
+
+
+/* codigo para estilos del cartel que sube y baja */
+.stairs-big-container{
+    color: white;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.stairs-flex{
+    display: flex;
+    align-items: center;
+}
+.stairs-flex-2{
+    display: flex;
+    align-items: center;
+}
+.stairs-small-container{
+    background-color: #24144C;
+    padding: 0.5rem;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.stairs-list{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.stairs{
+    color: white;
+    list-style: none;
+    margin-bottom: 0.7rem;
+}
+
+
+/* --------------------------------------------------------------- */
+
+/* ----codigo de estilo de las ondas de fondo-------------- */
+.padding-container{
+    padding-top: 5rem;
+    min-height: 100vh; 
+    position: relative;
+    }
+.padding-container-row{
+    min-height: 100%;
+    position: relative;
+}
+
+.main-title-container{
+    display: flex;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+.main-title{
+    width: 70%;
+    color: white;
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.onda-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: rotate(-19deg);
+    top: 20%;
+    left: 10%;
+}
+
+.onda{
+    width: 110rem;
+   
+}
+
+
+
+/* ------------------------------------------------------ */
+/* ---------------- SECTION TRUSTED---------------------- */
+/* ------------------------------------------------------ */
+
+
+.trusted{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+}
+.partners-logos-container{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: #cecece;
+}
+.partners-logos{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.partners-logos img{
+    width: 8rem;
+    margin: 0 1rem;
+} 
+/* ------------------------------------------------------ */
+/* ----------------SECTION NEW-WAY----------------------- */
+/* ------------------------------------------------------ */
+
+    .new-way{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .new-way img{
+        width: 60rem;
+    }
+    .new-way2{
+        display: none;
+    }
+
+
+
+/* ------------------------------------------------------ */
+/* ----------------SECTION SLIDE----------------------- */
+/* ------------------------------------------------------ */
+
+
+
+    .section-slide{
+        background-image: url("./assets/images/FONDO1.png");
+        background-position: center;
+        background-size: cover;
+    
+        color: white;
+    }
+    .section-slide-container-row{
+        height: 100vh;
+    }
+    .section-slide-container-col-title{
+        position: relative;
+    }
+    
+    .services-slide{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+    .services-slide h3{
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+    .offerings-button{
+        margin-top: 2rem;
+        border-radius: 1.5rem;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-90deg, rgba(44,215,87,1) 0%, rgba(0,194,201,1) 69%);
+    
+    }
+    .offerings-button a{
+        text-decoration: none;
+        padding: 0.5rem;
+    }
+    .offerings-button p{
+        margin: 0;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .diagrama-slide-container{
+        position: relative;
+    }
+    .diagrama-slide{
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+    }
+    .diagrama-slide img{
+        width: 40rem;
+    } 
+    .juli img{
+        padding-top: 4rem;
+        width: 25rem;
+    }
+    
+
+
+/* ------------------------------------------------------ */
+/* ---------------- SECTION 2----------------------------- */
+/* ------------------------------------------------------ */
+
+.section2{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.our-services{
+    color: white;
+    font-weight: bolder;
+    margin-top: 2rem;
+}
+.our-services h2{
+    font-size: 5rem;
+}
+.row-services{
+    width: 80%;
+    margin-top: 5rem;
+ 
+}
+.col-services{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.card-cont{
+    background-image: url("./assets/images/cardbg.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 310px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    opacity: 0.7;
+    padding: 0 0.3rem;
+}
+.card-cont:hover{
+    opacity: 1;
+}
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    /* opacity: 0.5; */
+
+}
+
+.img-box{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    
+}
+.card-cont .cards .content .img-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.content-box{
+    display: flex;
+    flex-direction: column;
+    
+}
+.content-box h3{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1em;
+}
+.content-box span{
+    text-transform: initial;
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+}
+.see-more-button{
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    background-color: rgba(235, 174, 69, 0.8);
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ------------------------------------------------------ */
+/* ----------------SECTION 3----------------------------- */
+/* ------------------------------------------------------ */
+
+.section3{
+    overflow: hidden;
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+.infinit-words-container{
+    width: 200%;
+    
+}
+.infinit-words{
+    display: flex;
+    justify-content: space-between;
+    width: 200%;
+    color: white;
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: -0.3rem;
+    line-height: .85;
+}
+
+.infinit-words-container2{
+    position: relative;
+    width: 300%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+}
+.infinit-words2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 300%;
+    color: white;
+    font-size: 6rem;
+    letter-spacing: -0.3rem;
+    line-height: .85;
+
+}
+
+
+/* ------------------------------------------------------ */
+/* ---------------SECTION 4----------------------------- */
+/* ------------------------------------------------------ */
+
+
+.section4{
+    width: 100%;
+}
+
+.smooth-scroll-container{
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll {
+   
+    overflow: hidden;
+}
+.horizontal-scroll-container {
+    width: 200%;
+    
+    display: flex;
+    flex-wrap: nowrap;
+}
+.horizontal-brand{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    scroll-snap-align: center;
+}
+
+
+/* ----------------- MUNCH ----------------------- */
+
+
+.brand1{
+    position: relative;
+    background-color: #EBAE45;
+}
+.brand1-row{
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.big-bag-container{
+    display: flex;
+    justify-content: center;
+}
+.big-bag-container img{
+    width: 21rem;
+}
+.small-images-container{
+    display: flex;
+    justify-content: center;
+}
+.small-images-container img{
+    width: 9rem;
+}
+.munch-title{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.munch-title h3{
+    color: white;
+    font-size: 4rem;
+}
+.munch-text{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.munch-text p{
+    color: white;
+    width: 80%;
+    text-align: justify;
+}
+
+.munch-logo{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.brand2{
+    background-color: #24144C;
+    height: 100vh;
+}
+/* .brand3{
+    background-color: #AA436F;
+    height: 100vh;
+
+} */
+
+
+
+
+/* ------------------------------------------------------ */
+/* ---------------SECTION 5----------------------------- */
+/* ------------------------------------------------------ */
+
+
+.section5{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url("./assets/images/gradient.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.vertical1{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.vertical2{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 14.3%;
+}
+.vertical3{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 28.6%;
+}
+.vertical4{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 42.9%;
+}
+.vertical5{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 57.2%;
+}
+.vertical6{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 71.5%;
+}
+.vertical7{
+    position: absolute;
+    background-color: #1F2023;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 85.8%;
+}
+.team-title{
+    margin-top: 5.5rem;
+    margin-left: 1rem;
+}
+.team-title h2{
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.team-row-container{
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+.team-col-container{
+    display: flex;
+    justify-content: center;
+}
+.team-card-container{
+    width: 250px;
+    height: 250px;
+    border-radius: 0.5rem;
+    position: relative;
+    border: 1px solid #0cf;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+.team-img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 0.5rem;
+    position: relative;
+    transition: all 0.5s ease;
+    filter: grayscale(0.5);
+}
+.team-card-container:hover .team-img{
+    transform: scale(1.1);
+    filter: grayscale(0);
+
+}
+.texto1{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(13, 154, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+.texto2{
+    margin-left: 0.2rem;
+    color: white;
+}
+
+.img-linked{
+    width: 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.dario h5{
+ font-size: 1.1rem;
+}
+
+
+/* ------------------------------------------------------ */
+/* ----------------SECTION 6----------------------------- */
+/* ------------------------------------------------------ */
+
+.section6{
+    width: 100%;
+}
+.story-container{
+    padding: 0;
+}
+.story-title{
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+.story-title h2{
+    color: white;
+    font-size: 4rem;
+}
+.row-story{
+    margin-top: 3rem;
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.story-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.story-pic img{
+    width: 22rem;
+    border-radius: 0.5rem;
+}
+.story-paragraph{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+.story-paragraph p{
+    width: 90%;
+}
+
+
+/* ------------------------------------------------------ */
+/* ----------------SECTION 7----------------------------- */
+/* ------------------------------------------------------ */
+
+.statistics-container{
+    margin-top: 5rem;
+    width: 100%;
+    background-color: #2b2a2a;
+    background-image: url("./assets/images/gradient.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-statistics-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+
+}
+.row-statistics{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-statistics{
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.statistics-info-container{
+    width: 8rem;
+    height: 8rem;
+    background-image: linear-gradient(223deg, #6d0095 3%, #ff7f76 97%, #ff7f76 104%);
+    border-radius: 0.5rem;
+}
+.statistics-numbers{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statistics-numbers span{
+    color: white;
+    font-size: 1.8rem;
+}
+.kpi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.kpi p{
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1;
+}
+
+
+/* ------------------------------------------------------ */
+/* --------------------FOOTER---------------------------- */
+/* ------------------------------------------------------ */
+
+
+
+.footer{
+    background-size: cover;
+}
+.logo-footer-container{
+    margin-left: 4rem;
+}
+.logo-footer-container img{
+    width: 8rem;
+}
+.logo-footer-container p{
+    color: white;
+    margin: 0;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-list li{
+    list-style: none;
+}
+.footer-list li a{
+    color: white;
+    text-decoration: none;
+}
+.footer-social-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social-list li{
+    list-style: none;
+}
+
+.footer-social-list li a img{
+    width: 2.5rem;
+    margin: 0 2rem;
+}
+.footer-line-container{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-line{
+    text-align: center;
+    width: 95%;
+    height: 1px;
+    background-color: white;
+}
+.designed{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* -------------------------------------------------------- */
+/* ---------------RESPONSIVE CODE------------------------- */
+/* -------------------------------------------------------- */
+
+
+
+
+@media (min-width: 1400px){
+    .onda{
+        width: 130rem;
+       
+    }
+}
+
+@media (max-width: 1200px){
+   
+    .main-title{
+        font-size: 4rem;
+    }
+    .second-title-container{
+        margin-top: 3.5rem;
+    }
+    .second-title{
+        font-size: 1.5rem;
+    }
+    .stairs-big-container{
+        margin-top: 2.5rem;
+    }
+    .main-title-container{
+        display: flex;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+    }
+    .main-title{
+        width: 80%;
+        font-size: 3rem;
+    }
+    .onda{
+        width: 110rem;
+       
+    }
+
+
+     /* ------------------------------------------------------ */
+    /* ----------------SECTION SLIDE------------------------- */
+    /* ------------------------------------------------------ */
+
+
+    .diagrama-slide{
+        margin-left: 0 !important;
+    }
+    .diagrama-slide img{
+        width: 33rem !important;
+
+    }
+    .juli img{
+        padding-top: 4rem;
+        width: 22rem !important;
+    }
+    
+   
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 3----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+    .infinit-words-container{
+        width: 200%;
+    }
+    .infinit-words-container2{
+        width: 400%;
+    }
+
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 4----------------------------- */
+    /* ------------------------------------------------------ */
+
+/* ---------------------------BLACKBIRD------------------------ */
+
+    .brand1-title{
+        color: white;
+        font-size: 3.5rem;
+    }
+    .brand1-text-container p{
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 991px){
+    
+    .main-title-container{
+        display: flex;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+    }
+    .main-title{
+        width: 90%;
+        font-size: 3rem;
+    }
+    .onda-container{
+        top: 50%;
+    }
+    
+    .onda{
+        width: 90rem;
+       
+    }
+    
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 2----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .row-services{
+        width: 100%;
+    }
+    
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION NEW-WAY------------------------- */
+    /* ------------------------------------------------------ */
+
+    
+    .new-way img{
+        width: 45rem !important;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION SLIDE------------------------- */
+    /* ------------------------------------------------------ */
+
+    .services-slide h3{
+        font-size: 1.4rem;
+    }
+    .services-slide h5{
+        font-size: 0.9rem;
+    }
+    .diagrama-slide img{
+        width: 25rem !important;
+
+    }
+   
+    .juli img{
+        padding-top: 4rem;
+        width: 21rem !important;
+    }
+    
+    
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 3----------------------------- */
+    /* ------------------------------------------------------ */
+
+    
+    .infinit-words{
+        font-size: 5.5rem;
+    }
+    .infinit-words2{
+        font-size: 5.5rem;
+    }
+
+    .infinit-words-container{
+        width: 400%;
+    }
+    .infinit-words-container2{
+        width: 400%;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 4----------------------------- */
+    /* ------------------------------------------------------ */
+
+    /* ----------------- MUNCH ----------------------- */
+
+
+    .brand1{
+        position: relative;
+        background-color: #EBAE45;
+    }
+    .brand1-row{
+        padding-top: 0;
+    }
+
+    .brand1-1{
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+    }
+    .munch-images-container{
+        margin-top: 3rem;
+    }
+    .big-bag-container img{
+        width: 20rem;
+    }
+
+    .small-images-container img{
+        width: 7rem;
+    }
+    .munch-title{
+        padding-top: 6rem;
+    }
+    .munch-title h3{
+        font-size: 3rem;
+    }
+    .munch-text{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .munch-text p{
+        color: white;
+        width: 80%;
+        text-align: justify;
+    }
+    .munch-logo{
+        margin-top: 1rem;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* ---------------SECTION 5----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .texto2 h5{
+        font-size: 1.1rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ---------------SECTION 6----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+    
+    .story-title{
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        margin-left: 0;
+    }
+    .story-title h2{
+        color: white;
+        font-size: 3.5rem;
+    }
+    
+    
+    .story-pic img{
+        width: 20rem;
+        border-radius: 0.5rem;
+    }
+    .story-paragraph{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        justify-content: center;
+    }
+    .story-paragraph p{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    
+    /* ------------------------------------------------------ */
+    /* ---------------SECTION 7----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+    .col-statistics{
+        padding: 1.5rem;
+    }
+    
+}
+
+
+
+
+@media (max-width: 768px){
+    .arrow{
+        display: none;
+    }
+    .navbar-list-links{
+        font-size: 2.5rem;
+    }
+    .header-container{
+        background-color: rgba(31, 32, 35, 0.5);
+    }
+    .navbar-container{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+    }
+   
+    .logo-container{
+        width: 100%;
+    }
+    .nav-icon-5{
+        display: flex;
+    }
+    .navbar-list{
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 5rem 0 0 0;
+        margin-top: 5rem;
+        width: 100%;
+        overflow-y: auto;
+    }
+    .navbar-list-links{
+        text-align: center;
+        height: auto;
+    }
+    .navbar-bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        opacity: 0;
+    }
+    
+    .down-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-vertical{
+        position: unset;
+        height: 0;
+        padding: 0;
+    }
+
+
+    .main-title{
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    .onda-container{
+        top: 60%;
+        left: 0;
+        transform: rotate(-10deg);
+        margin-top: 5rem;
+    }
+    
+    .onda{
+        width: 70rem;
+       
+    }
+    
+    .stairs-big-container{
+        margin-top: 4rem;
+    }
+    
+    
+    /* ------------------------------------------------------ */
+    /* ---------------- SECTION TRUSTED---------------------- */
+    /* ------------------------------------------------------ */
+
+    .partners-logos-container{
+        padding: 0.5rem;
+    }
+    .partners-logos{
+        width: 100%;
+    }
+
+    .partners-logos img{
+        width: 5rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION NEW-WAY------------------------- */
+    /* ------------------------------------------------------ */
+
+    
+    .new-way img{
+        width: 35rem !important;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION SLIDE------------------------- */
+    /* ------------------------------------------------------ */
+
+    .section-slide-container-col-title{
+        height: 40% !important;
+    }
+    .diagrama-slide-container{
+        height: 60% !important;
+    }
+    .services-slide h3{
+        font-size: 1.2rem;
+        padding-top: 8rem;
+        text-align: center;
+    }
+    .services-slide h5{
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    .offerings-button{
+        margin-top: 1rem !important;
+    }
+
+    .offerings-button a{
+        font-size: 0.8rem;
+    }
+    .diagrama-slide img{
+        width: 23rem !important;
+
+    }
+    .juli img{
+        padding-top: 0 !important;
+        width: 15rem !important;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 3----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+
+    .infinit-words-container{
+        width: 500%;
+    }
+    .infinit-words{
+        font-size: 4.5rem;
+    }
+    .infinit-words-container2{
+        width: 500%;
+    }
+    .infinit-words2{
+        font-size: 4.5rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 4----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .horizontal-scroll {
+        overflow: visible;
+    }
+    .horizontal-scroll-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .horizontal-brand{
+        height: initial;
+    }
+    
+    /* ----------------- MUNCH ----------------------- */
+
+
+    .brand1-row{
+        margin: 0;
+    }
+
+    .brand1-1{
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        padding-left: 0;
+    }
+    .munch-images-container{
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .big-bag-container img{
+        width: 12rem;
+    }
+    .small-images-container{
+        flex-direction: column;
+    }
+    .small-images-container img{
+        width: 4rem;
+    }
+    .munch-text-logo-container{
+        display: flex;
+    }
+
+    .munch-text{
+        width: 60%;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 2rem;
+    }
+    .munch-text p{
+        font-size: 0.9rem;
+        color: white;
+        width: 100%;
+        text-align: justify;
+    }
+    .munch-logo{
+        width: 40%;
+        margin-top: 0;
+    }
+    .munch-logo img{
+        width: 7rem;
+    }
+
+
+    
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 5----------------------------- */
+    /* ------------------------------------------------------ */
+    .section5{
+        background-image: url("./assets/images/gradient.png");
+        background-position: center;
+        background-size: cover;
+    }
+    .vertical{
+        display: none;
+    }
+    .team-title{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ---------------SECTION 6----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+    
+    .story-title{
+        display: flex;
+        justify-content: center;
+    }
+    .story-title h2{
+        font-size: 3rem;
+    }
+    .story-pic img{
+        width: 15rem;
+    }
+    .story-paragraph p{
+        font-size: 0.6rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 7----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .col-statistics{
+        padding: 1rem;
+    }
+
+    .statistics-info-container{
+        width: 6rem;
+        height: 6rem;
+    }
+    .statistics-numbers span{
+        font-size: 1.3rem;
+    }
+    .kpi p{
+        font-size: 0.8rem;
+    }
+    
+    /* ------------------------------------------------------ */
+    /* ----------------FOOTER ----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+
+    .logo-footer-container{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;    
+    }
+    .logo-footer-container img{
+        width: 6rem;
+    }
+    .footer-list{
+        padding: 0;
+    }
+    .footer-social-list{
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px){
+    
+    .navbar-list-links{
+        font-size: 2.5rem;
+    }
+    
+    .main-title{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .onda-container{
+        margin-top: 2rem;
+        top: 50%;
+        left: 0;
+        transform: rotate(-10deg);
+    }
+    
+    .onda{
+        width: 80rem;
+       
+    }
+    
+    .stairs-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .onda-container{
+        position: relative;
+    }
+    .onda{
+        position: absolute;
+        width: 50rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION NEW-WAY------------------------- */
+    /* ------------------------------------------------------ */
+
+    .new-way{
+        display: none !important;
+    }
+    .new-way2{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .new-way2 img{
+        width: 20rem;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 2----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .our-services{
+        color: white;
+        font-weight: bolder;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .our-services h2{
+        font-size: 2.8rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION SLIDE------------------------- */
+    /* ------------------------------------------------------ */
+    
+    .section-slide{
+        display: block !important;
+    }
+    .split-section-desktop{
+        display: none !important;
+    }
+    .services-slide h5{
+        font-size: 0.8rem;
+    } 
+    .offerings-button{
+        margin-top: 1rem !important;
+    }
+    .offerings-button a{
+        font-size: 0.8rem;
+    }
+    .diagrama-slide{
+        margin-top: 1rem;
+    }
+    .diagrama-slide img{
+        width: 23rem !important;
+        
+    }
+    .services-slide h3{
+        font-size: 1.4rem;
+        padding-top: 8rem;
+    }
+    .juli img{
+        padding-top: 0 !important;
+        width: 14rem !important;
+    }
+    
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 3----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+
+    .infinit-words-container{
+        width: 500%;
+    }
+    .infinit-words{
+        font-size: 4rem;
+    }
+    .infinit-words-container2{
+        width: 700%;
+    }
+    .infinit-words2{
+        font-size: 4rem;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 4----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .horizontal-scroll {
+        overflow: visible;
+    }
+    .horizontal-scroll-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    /* ----------------- MUNCH ----------------------- */
+
+
+    .brand1-row{
+        margin: 0;
+    }
+
+    .brand1-1{
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        padding-bottom: 3rem;
+    }
+    .munch-images-container{
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .big-bag-container img{
+        width: 12rem;
+    }
+    .small-images-container{
+        flex-direction: column;
+    }
+    .small-images-container img{
+        width: 4rem;
+    }
+    .munch-text-logo-container{
+        display: flex;
+        margin-top: 3rem;
+    }
+    .munch-title{
+        padding-top: 6rem;
+    }
+    .munch-text{
+        width: 60%;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1.5rem;
+    }
+    .munch-text p{
+        font-size: 0.7rem;
+        color: white;
+        width: 100%;
+        text-align: justify;
+    }
+    .munch-logo{
+        width: 40%;
+        margin-top: 0;
+    }
+    .munch-logo img{
+        width: 7rem;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 5----------------------------- */
+    /* ------------------------------------------------------ */
+    
+    .section5{
+        background-image: url("./assets/images/gradient.png");
+        background-position: center;
+        background-size: cover;
+    }
+    .vertical{
+        display: none;
+    }
+    .team-title{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ---------------SECTION 6----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+    .row-story{
+        margin-left: 0;
+    }
+    .story-title{
+        display: flex;
+        justify-content: center;
+    }
+    .story-title h2{
+        font-size: 3rem;
+    }
+    .story-pic img{
+        width: 15rem;
+    }
+    .story-paragraph{
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .story-paragraph p{
+        font-size: 0.8rem;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 415px){
+    .padding-container{
+        position: relative;
+    }
+    .navbar-list-links{
+        font-size: 2.5rem;
+    }
+    .onda{
+        position: absolute;
+        width: 60rem;
+        right: -30%;
+        top: 70%;
+    }
+    .main-title-container{
+        margin-top: 3rem;
+    }
+    .main-title{
+        font-size: 2.7rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    .second-title-container{
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    .second-title{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .stairs-big-container{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION SLIDE------------------------- */
+    /* ------------------------------------------------------ */
+
+    
+    .diagrama-slide img{
+        width: 20rem !important;
+
+    }
+   
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 4----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .horizontal-scroll {
+        overflow: visible;
+    }
+    .horizontal-scroll-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 5----------------------------- */
+    /* ------------------------------------------------------ */
+    .section5{
+        background-image: url("./assets/images/gradient.png");
+        background-position: center;
+        background-size: cover;
+    }
+    .vertical{
+        display: none;
+    }    
+    .team-title{
+        text-align: center;
+        margin-left: 0;
+    }
+    .team-title h2{
+        font-size: 3rem;
+    }
+}
+
+
+
+@media (max-width: 360px){
+    .navbar-list-links{
+        font-size: 2.5rem;
+    }
+    .main-title{
+        font-size: 2.5rem;
+        display: inline;
+    }
+    .second-title{
+        width: 100%;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    .onda{
+        width: 40rem;
+        right: -45%;
+        top: 75%;
+    }
+    .stairs-big-container{
+        margin-top: 4rem;
+    }
+
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 2----------------------------- */
+    /* ------------------------------------------------------ */
+
+    
+    .our-services h2{
+        font-size: 2.5rem;
+    }
+
+
+        /* ------------------------------------------------------ */
+    /* ----------------SECTION SLIDE----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .juli img{
+        width: 14rem !important;
+    }
+    
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 3----------------------------- */
+    /* ------------------------------------------------------ */
+
+    .infinit-words{
+        font-size: 3.5rem;
+    }
+    .infinit-words-container2{
+        width: 600%;
+    }
+    .infinit-words2{
+        font-size: 3.5rem;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 4----------------------------- */
+    /* ------------------------------------------------------ */
+
+
+
+    .horizontal-scroll {
+        overflow: visible;
+    }
+    .horizontal-scroll-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+
+    /* ------------------------------------------------------ */
+    /* ----------------SECTION 5----------------------------- */
+    /* ------------------------------------------------------ */
+    .section5{
+        background-image: url("./assets/images/gradient.png");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .team-title{
+        text-align: center;
+        margin-left: 0;
+    }
+    .team-title h2{
+        font-size: 3rem;
+    }
+
+}
